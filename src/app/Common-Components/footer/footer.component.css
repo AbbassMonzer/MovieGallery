@@ -1,0 +1,17 @@
+.fixed {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer {
+  background-color: #032541;
+}
+
+div,.list-inline {
+  color: white;
+}
+
+
+
+
