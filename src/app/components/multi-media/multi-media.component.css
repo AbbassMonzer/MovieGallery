@@ -21,6 +21,7 @@
 }
 
 .card-body{
+  margin-top: 32px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;

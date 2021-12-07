@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-multi-media',
   templateUrl: './multi-media.component.html',
@@ -7,9 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MultiMediaComponent implements OnInit {
   @Input() multiMedia: any;
-  constructor() { }
+  constructor()  { }
 
   ngOnInit(): void {
     console.log("muliMedia",this.multiMedia)
   }
+
 }

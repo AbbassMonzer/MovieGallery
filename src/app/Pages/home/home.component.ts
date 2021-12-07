@@ -14,7 +14,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this._apiService.getData('movie','top_rated').subscribe(response =>{
       this.topRatedMovies = response.results.slice(0, 6);
-      console.log("this.",this.topRatedMovies)
+      console.log("movie",this.topRatedMovies)
+    })
+
+    this._apiService.getData('tv','top_rated').subscribe(response =>{
+      this.topRatedTVShows = response.results.slice(0, 6);
+      console.log("tv",this.topRatedTVShows)
     })
   }
 
