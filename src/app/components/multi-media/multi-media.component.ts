@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-multi-media',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./multi-media.component.css']
 })
 export class MultiMediaComponent implements OnInit {
-
+  @Input() multiMedia: any;
   constructor() { }
 
   ngOnInit(): void {
+    console.log("muliMedia",this.multiMedia)
   }
-
 }

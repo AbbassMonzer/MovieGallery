@@ -14,6 +14,7 @@ import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MultiMediaComponent } from './components/multi-media/multi-media.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,7 @@ import { MultiMediaComponent } from './components/multi-media/multi-media.compon
     MovieDetailsComponent,
     TvShowsComponent,
     TvShowsDetailsComponent,
-    MultiMediaComponent
+    MultiMediaComponent,
   ],
   imports: [
     BrowserModule,
