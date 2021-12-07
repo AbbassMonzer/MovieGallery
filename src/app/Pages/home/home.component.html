@@ -1,5 +1,5 @@
-<h1> Top 6 rated movies </h1>
-
-<div *ngFor="let movie of topRatedMovies">
-  <app-multi-media *ngIf="movie" [multiMedia]="movie"></app-multi-media>
+<div class="row">
+  <div *ngFor="let movie of topRatedMovies" class="col-lg-4">
+    <app-multi-media *ngIf="movie" [multiMedia]="movie"></app-multi-media>
+  </div>
 </div>

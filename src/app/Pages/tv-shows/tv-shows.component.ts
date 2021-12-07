@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tv-shows.component.css']
 })
 export class TvShowsComponent implements OnInit {
-
+  categories = ["red","blue"];
   constructor() { }
 
   ngOnInit(): void {
