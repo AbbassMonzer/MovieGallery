@@ -3,13 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './Common-Components/header/header.component';
-import { FooterComponent } from './Common-Components/footer/footer.component';
-import { HomeComponent } from './Pages/home/home.component';
-import { MoviesComponent } from './Pages/movies/movies.component';
-import { MovieDetailsComponent } from './Pages/movie-details/movie-details.component';
-import { TvShowsComponent } from './Pages/tv-shows/tv-shows.component';
-import { TvShowsDetailsComponent } from './Pages/tv-shows-details/tv-shows-details.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MoviesComponent } from './pages/movies/movies.component';
+import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+import { TvShowsComponent } from './pages/tv-shows/tv-shows.component';
+import { TvShowsDetailsComponent } from './pages/tv-shows-details/tv-shows-details.component';
+import { ApiService } from './services/api.service';
+import { HttpClientModule } from '@angular/common/http';
+import { MultiMediaComponent } from './components/multi-media/multi-media.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,15 @@ import { TvShowsDetailsComponent } from './Pages/tv-shows-details/tv-shows-detai
     MoviesComponent,
     MovieDetailsComponent,
     TvShowsComponent,
-    TvShowsDetailsComponent
+    TvShowsDetailsComponent,
+    MultiMediaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
