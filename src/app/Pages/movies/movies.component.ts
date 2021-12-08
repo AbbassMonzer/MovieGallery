@@ -11,6 +11,7 @@ export class MoviesComponent implements OnInit {
   public movieCategory = [];
   public selectedItem;
   pageOfItems: Array<any>;
+
   constructor(private _apiService: ApiService) { }
 
 

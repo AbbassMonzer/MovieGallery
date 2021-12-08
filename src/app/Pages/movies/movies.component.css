@@ -2,6 +2,10 @@
 cursor: pointer;
 }
 
+.sticky-top{
+  top:80px
+}
+
 .wrapper{
   margin-top: 20px;
   margin-left: 20px;

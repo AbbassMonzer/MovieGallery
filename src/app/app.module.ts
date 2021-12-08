@@ -13,6 +13,7 @@ import { TvShowsDetailsComponent } from './pages/tv-shows-details/tv-shows-detai
 import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MultiMediaComponent } from './components/multi-media/multi-media.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { MultiMediaComponent } from './components/multi-media/multi-media.compon
     TvShowsComponent,
     TvShowsDetailsComponent,
     MultiMediaComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,

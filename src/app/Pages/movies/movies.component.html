@@ -1,8 +1,8 @@
 <div class="row wrapper">
   <div class="col-3">
     <div class="list-group sticky-top">
-      <li *ngFor="let list of movieList" [ngClass]="{'active': selectedItem == list}" (click)="listClick(list)"
-        class="list-group-item list-group-item-action">{{list.name}}</li>
+      <li *ngFor="let list of movieList;let i=index" [ngClass]="{'active': selectedItem == list}" (click)="listClick(list)"
+        class="list-group-item list-group-item-action">{{list.name}} <a  style="color: black;"  routerLink="/categories">All Categories</a></li>
     </div>
   </div>
 
