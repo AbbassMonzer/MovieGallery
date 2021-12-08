@@ -12,4 +12,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  navbarCollapsed = true;
+
+  toggleNavbarCollapse() {
+      this.navbarCollapsed = !this.navbarCollapsed;
+  }
+
 }
