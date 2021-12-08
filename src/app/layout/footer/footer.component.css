@@ -13,6 +13,11 @@ div,.list-inline {
   color: white;
 }
 
+h6{
+  padding-top: 50px;
+  cursor: pointer;
+}
 
-
-
+.mr-12{
+  margin-right: 12px;
+}

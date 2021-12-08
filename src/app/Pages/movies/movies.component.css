@@ -1,5 +1,16 @@
-.wrapper {
+.list-group-item {
+cursor: pointer;
+}
+
+.wrapper{
   margin-top: 20px;
   margin-left: 20px;
 }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 

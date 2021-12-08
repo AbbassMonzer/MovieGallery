@@ -1,31 +1,18 @@
-<div class="row">
+<div class="row wrapper">
   <div class="col-3">
     <div class="list-group sticky-top">
-      <a class="list-group-item list-group-item-action" style="cursor: pointer;">one</a>
-      <a class="list-group-item list-group-item-action" style="cursor: pointer;">two</a>
+      <li *ngFor="let list of tvList;let i=first;let firstItem = first"  [ngClass]="{ active: firstItem }" [class.active]="i" [ngClass]="{'active': selectedItem == list}" (click)="listClick(list)"
+        class="list-group-item list-group-item-action">{{list.name}}</li>
     </div>
   </div>
+
   <div class="col" style="margin-left: 45px;">
     <div class="row">
-      <ng-container>
-        <div class="col" style=" margin-bottom: 23px;">
-          <div class="card" style="width: 18rem;">
-            <img src="" class="card-img-top" style="height: 200px;">
-            <div class="card-body">
-              <h5 class="card-title">title</h5>
-              <p class="card-text">price</p>
-
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-primary btn-block">Add to Cart</button>
-            </div>
-          </div>
-        </div>
+      <div *ngFor="let movie of tvCategory ; let i=index" class="col-lg-6">
+        <app-multi-media [multiMedia]="movie"></app-multi-media>
         <br>
         <br>
-      </ng-container>
-
+      </div>
     </div>
-
   </div>
 </div>
