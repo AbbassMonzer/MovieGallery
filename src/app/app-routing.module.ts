@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'movies', component:MoviesComponent},
   {path:'tv-shows', component:TvShowsComponent},
   {path:'tv-shows-details/:id', component:TvShowsDetailsComponent},
-  {path:'categories', component:CategoriesComponent},
+  {path:'categories/:id', component:CategoriesComponent},
 
 ];
 
