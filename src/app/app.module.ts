@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { JwPaginationModule  } from 'jw-angular-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -30,7 +30,8 @@ import { MultiMediaComponent } from './components/multi-media/multi-media.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    JwPaginationModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

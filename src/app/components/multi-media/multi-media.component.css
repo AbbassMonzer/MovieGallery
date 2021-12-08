@@ -24,7 +24,8 @@
 
 .card-body{
   margin-top: 32px;
-  white-space: nowrap;
+  display:block;
+  line-height:14pt;
   overflow: hidden;
   text-overflow: clip;
 }

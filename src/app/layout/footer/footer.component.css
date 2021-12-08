@@ -9,15 +9,20 @@ footer {
   background-color: #032541;
 }
 
-div,.list-inline {
+div,
+.list-inline {
   color: white;
 }
 
-h6{
+h6 {
   padding-top: 50px;
   cursor: pointer;
 }
 
-.mr-12{
+.mr-12 {
   margin-right: 12px;
+}
+
+h6:hover {
+  text-decoration: underline;
 }

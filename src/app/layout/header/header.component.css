@@ -4,3 +4,13 @@ nav {
 .nav-link {
   color: white;
 }
+
+
+.navbar .navbar-nav > li > a:hover {
+  background-color: white;
+  color: #032541;
+  border-radius: 10px;
+}
+
+
+
