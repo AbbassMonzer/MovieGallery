@@ -14,12 +14,11 @@ export class MultiMediaComponent implements OnInit {
   }
 
   go(multiMedia){
-    console.log("asdsf")
     if(multiMedia.title){
-      this.route.navigate(['/movies']);
+      this.route.navigate(['/movie-details',multiMedia.id]);
     }
     if(multiMedia.name){
-      this.route.navigate(['/tv-shows']);
+      this.route.navigate(['/tv-shows-details',multiMedia.id]);
     }
   }
 

@@ -32,8 +32,8 @@ export class MoviesComponent implements OnInit {
     this.selectedItem = newValue;
     let id = newValue.id;
 
-    this._apiService.getData('discover','movie',id).subscribe(response =>{
-      this.movieCategory = response.results.slice(0, 4);
+    this._apiService.getData('discover','movie',id,'vote_average').subscribe(response =>{
+      this.movieCategory = response.results.slice(0,4);
       console.log("genre",this.movieCategory)
     })
 
@@ -42,3 +42,4 @@ export class MoviesComponent implements OnInit {
 
 }
 
+// vote_average

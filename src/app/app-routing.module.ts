@@ -9,10 +9,10 @@ import { TvShowsComponent } from './pages/tv-shows/tv-shows.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'movie-details', component:MovieDetailsComponent},
+  {path:'movie-details/:id', component:MovieDetailsComponent},
   {path:'movies', component:MoviesComponent},
   {path:'tv-shows', component:TvShowsComponent},
-  {path:'tv-shows-details', component:TvShowsDetailsComponent},
+  {path:'tv-shows-details/:id', component:TvShowsDetailsComponent},
 
 ];
 

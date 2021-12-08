@@ -31,7 +31,7 @@ export class TvShowsComponent implements OnInit {
     this.selectedItem = newValue;
     let id = newValue.id;
 
-    this._apiService.getData('discover','tv',id).subscribe(response =>{
+    this._apiService.getData('discover','tv',id,'vote_average').subscribe(response =>{
       this.tvCategory = response.results.slice(0, 4);
       console.log("genre",this.tvCategory)
     })
