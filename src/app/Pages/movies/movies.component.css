@@ -1,9 +1,7 @@
 .list-group-item {
 cursor: pointer;
-}
-
-.sticky-top{
-  top:80px
+width: 50%;
+margin-left: 45px;
 }
 
 .wrapper{
@@ -11,12 +9,9 @@ cursor: pointer;
   margin-left: 20px;
 }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-.genre-title{
-
+.fa-angle-double-right{
+  margin-left: 19rem;
+  vertical-align: middle;
 }
 
 

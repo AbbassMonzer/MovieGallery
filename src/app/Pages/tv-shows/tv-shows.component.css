@@ -1,12 +1,15 @@
-.sticky-top {
-  top: 80px;
-}
-
 .list-group-item {
   cursor: pointer;
+  width: 50%;
+  margin-left: 45px;
 }
 
 .wrapper {
   margin-top: 20px;
   margin-left: 20px;
+}
+
+.fa-angle-double-right {
+  margin-left: 11rem;
+  vertical-align: middle;
 }

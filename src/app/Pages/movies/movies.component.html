@@ -1,10 +1,12 @@
-<div class="row ">
+<div class="row wrapper">
   <div>
     <div>
       <div *ngFor="let genre of genreList;let i=index">
-        <a style="color: black;" [routerLink]="['/categories', genre.id,'movie']">
-          <h3 class="genre-title">{{genre.name}} </h3>
-        </a>
+        <ul class="list-group">
+          <li class="list-group-item" style="color: black;" [routerLink]="['/categories', genre.id,'movie']">
+            <h3 class="genre-title">{{genre.name}} - Top Rated <i class="fas fa-angle-double-right"></i></h3>
+          </li>
+        </ul>
         <div class="col" style="margin-left: 45px;">
           <div class="row">
             <div *ngFor="let movie of genre.movies ; let i=index" class="col-lg-4">
