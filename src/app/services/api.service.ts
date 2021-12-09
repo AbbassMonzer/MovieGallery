@@ -32,6 +32,31 @@ export class ApiService {
     )
   }
 
+
+  public gestData(type: string, query: string,params?: HttpParams) {
+    let apiResponse: any;
+    return new Observable<any>(
+      (responseObservable) => {
+        this.http.get(`${this.uri}/${type}/${query}`,
+         {params: params.append('api_key', this._apiKey)}).pipe(
+          map((response) => response),
+          catchError(ApiService._handleError)
+        ).subscribe((response: any) =>
+          (apiResponse = response),
+          (error) => {
+            responseObservable.error(error)
+          },
+          () => {
+            responseObservable.next(apiResponse);
+            responseObservable.complete()
+          }
+        )
+      }
+    )
+
+  }
+
+
   private static _handleError(error) {
     const objectError = {
       status: error.status,

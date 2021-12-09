@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { JwPaginationModule  } from 'jw-angular-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -14,6 +13,7 @@ import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MultiMediaComponent } from './components/multi-media/multi-media.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -33,7 +33,7 @@ import { CategoriesComponent } from './pages/categories/categories.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    JwPaginationModule
+    NgbModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
