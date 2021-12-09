@@ -33,7 +33,7 @@ export class ApiService {
   }
 
 
-  public gestData(type: string, query: string,params?: HttpParams) {
+  public getDataTwo(type: string, query: string,params?: HttpParams) {
     let apiResponse: any;
     return new Observable<any>(
       (responseObservable) => {
@@ -65,4 +65,3 @@ export class ApiService {
     return throwError(objectError)
   }
 }
-

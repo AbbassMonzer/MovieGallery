@@ -26,6 +26,3 @@ export class TvShowsComponent implements OnInit {
 
 
 }
-
-
-

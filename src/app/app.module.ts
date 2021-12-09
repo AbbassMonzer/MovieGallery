@@ -6,9 +6,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MoviesComponent } from './pages/movies/movies.component';
-import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+import { MovieDetailsComponent } from './pages/multi-media-details/movie-details.component';
 import { TvShowsComponent } from './pages/tv-shows/tv-shows.component';
-import { TvShowsDetailsComponent } from './pages/tv-shows-details/tv-shows-details.component';
 import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MultiMediaComponent } from './components/multi-media/multi-media.component';
@@ -25,7 +24,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MoviesComponent,
     MovieDetailsComponent,
     TvShowsComponent,
-    TvShowsDetailsComponent,
     MultiMediaComponent,
     CategoriesComponent,
   ],

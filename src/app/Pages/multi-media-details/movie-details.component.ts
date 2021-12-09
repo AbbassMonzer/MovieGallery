@@ -9,13 +9,14 @@ import { ApiService } from 'src/app/services/api.service';
 export class MovieDetailsComponent implements OnInit {
   public id:any;
   public movieDetails = [];
+  public type:string;
   constructor(private activatedRoute: ActivatedRoute,private _apiService: ApiService) { }
 
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
-    this._apiService.getData('movie',this.id).subscribe(response =>{
-      this.movieDetails = response
-      console.log("movieDetails",this.movieDetails)
+    this.type = this.activatedRoute.snapshot.paramMap.get("type");
+    this._apiService.getData(this.type ,this.id).subscribe(response =>{
+      this.movieDetails = response;
     })
   }
 

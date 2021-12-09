@@ -15,10 +15,10 @@ export class MultiMediaComponent implements OnInit {
 
   go(multiMedia){
     if(multiMedia.title){
-      this.route.navigate(['/movie-details',multiMedia.id]);
+      this.route.navigate(['/multi-media-details',multiMedia.id,'movie']);
     }
     if(multiMedia.name){
-      this.route.navigate(['/tv-shows-details',multiMedia.id]);
+      this.route.navigate(['/multi-media-details',multiMedia.id,'tv']);
     }
   }
 
