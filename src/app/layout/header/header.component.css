@@ -13,4 +13,14 @@ nav {
 }
 
 
-
+.navbar-nav li > a:hover,
+.navbar-nav li > a:focus {
+  background-color: white;
+  color: #032541;
+  border-radius: 10px;
+}
+.navbar-nav li.active > a {
+  background-color: white;
+  color: #032541;
+  border-radius: 10px;
+}
