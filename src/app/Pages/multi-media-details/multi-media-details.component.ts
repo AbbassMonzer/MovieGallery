@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 @Component({
-  selector: 'app-movie-details',
-  templateUrl: './movie-details.component.html',
-  styleUrls: ['./movie-details.component.css']
+  selector: 'multi-media-details',
+  templateUrl: './multi-media-details.component.html',
+  styleUrls: ['./multi-media-details.component.css']
 })
 export class MovieDetailsComponent implements OnInit {
   public id:any;

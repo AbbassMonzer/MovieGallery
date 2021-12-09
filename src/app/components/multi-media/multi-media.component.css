@@ -3,12 +3,14 @@
   transition-duration: 500ms;
   transition-timing-function: ease-out;
   opacity: 0.8;
+  transform: scale(1.1);
 }
 
 .card img {
   transform: scale(1.0, 1.0);
   transition-duration: 500ms;
   transition-timing-function: ease-out;
+  transition: transform .5s ease;
 }
 
 .card-img-wrapper {
@@ -16,6 +18,13 @@
   position: relative;
   width: 20rem;
   margin-top: 15px;
+}
+
+.card-img-wrapper-horizantal{
+  overflow: hidden;
+  position: relative;
+  width: 55rem;
+  margin-top: 10px;
 }
 
 .fa-heart {

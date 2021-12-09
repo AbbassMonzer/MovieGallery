@@ -4,7 +4,7 @@
       <div *ngFor="let genre of genreList;let i=index">
         <ul class="list-group">
           <li class="list-group-item" style="color: black;" [routerLink]="['/categories', genre.id,'movie']">
-            <h3 class="genre-title">{{genre.name}} - Top Rated <i class="fas fa-angle-double-right"></i></h3>
+            <h3 class="genre-title">{{genre.name}} <i class="fas fa-angle-double-right"></i></h3>
           </li>
         </ul>
         <div class="col" style="margin-left: 45px;">
