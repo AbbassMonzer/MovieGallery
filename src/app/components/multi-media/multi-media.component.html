@@ -1,4 +1,4 @@
-<div class="card card-img-wrapper" *ngIf="multiMedia && !multiMedia.imdb_id">
+<div class="card card-img-wrapper" *ngIf="multiMedia && !multiMedia.imdb_id && !multiMedia.number_of_seasons">
   <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{multiMedia.poster_path}}" alt="poster">
   <div class="card-body animate">
     <div class="row">
@@ -11,12 +11,12 @@
     <p *ngIf="multiMedia.status" class="card-text">Status: {{multiMedia.status}}</p>
     <p *ngIf="multiMedia.tagline" class="card-text">Tagline: {{multiMedia.tagline}}</p>
     <p *ngIf="multiMedia.original_language" class="card-text">Original language: {{multiMedia.original_language}}</p>
-    <a *ngIf="!multiMedia.imdb_id" (click)="go(multiMedia)" class="btn btn-primary"> <i class="far fa-eye"></i> View</a>
+    <a *ngIf="!multiMedia.imdb_id" (click)=" view (multiMedia)" class="btn btn-primary"> <i class="far fa-eye"></i> View</a>
   </div>
 </div>
 
 
-<div class="card card-img-wrapper-horizantal" *ngIf="multiMedia.imdb_id">
+<div class="card card-img-wrapper-horizantal" *ngIf="multiMedia.imdb_id || multiMedia.number_of_seasons">
   <div class="row no-gutters">
     <div class="col-md-4">
       <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{multiMedia.poster_path}}" alt="poster">
@@ -33,7 +33,10 @@
         <p *ngIf="multiMedia.status" class="card-text">Status: {{multiMedia.status}}</p>
         <p *ngIf="multiMedia.tagline" class="card-text">Tagline: {{multiMedia.tagline}}</p>
         <p *ngIf="multiMedia.original_language" class="card-text">Original language: {{multiMedia.original_language}}</p>
-        <a *ngIf="!multiMedia.imdb_id" (click)="go(multiMedia)" class="btn btn-primary"> <i class="far fa-eye"></i> View</a>
+        <p *ngIf="multiMedia.budget" class="card-text">Budget: {{multiMedia.budget}}</p>
+        <p *ngIf="multiMedia.revenue" class="card-text">Revenue: {{multiMedia.revenue}}</p>
+        <p *ngIf="multiMedia.number_of_episodes" class="card-text">Number of Episodes: {{multiMedia.number_of_episodes}}</p>
+        <p *ngIf="multiMedia.number_of_seasons" class="card-text">Number of Seasons: {{multiMedia.number_of_seasons}}</p>
       </div>
     </div>
   </div>

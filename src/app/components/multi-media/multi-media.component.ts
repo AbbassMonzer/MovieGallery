@@ -13,7 +13,7 @@ export class MultiMediaComponent implements OnInit {
 
   }
 
-  go(multiMedia){
+  view(multiMedia){
     if(multiMedia.title){
       this.route.navigate(['/multi-media-details',multiMedia.id,'movie']);
     }

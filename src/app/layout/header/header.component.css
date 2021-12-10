@@ -5,6 +5,9 @@ nav {
   color: white;
 }
 
+li{
+  padding-left: 15px;
+}
 
 .navbar .navbar-nav > li > a:hover {
   background-color: white;

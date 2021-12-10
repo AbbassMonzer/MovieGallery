@@ -10,47 +10,47 @@ export class ApiService {
   public uri: string = 'https://api.themoviedb.org/3'
   constructor(private http: HttpClient) { }
 
-  public getData(type: string, query: string,qryNum?:any,qryString?:any) {
+  public getData(type: string, query: string, qryNum?: any, qryString?: any) {
     let apiResponse: any;
     return new Observable<any>(
       (responseObservable) => {
         this.http.get(`${this.uri}/${type}/${query}`,
-         {params: new HttpParams().set('api_key', this._apiKey).append('with_genres',qryNum).append('sort_by',qryString)}).pipe(
-          map((response) => response),
-          catchError(ApiService._handleError)
-        ).subscribe((response: any) =>
-          (apiResponse = response),
-          (error) => {
-            responseObservable.error(error)
-          },
-          () => {
-            responseObservable.next(apiResponse);
-            responseObservable.complete()
-          }
-        )
+          { params: new HttpParams().set('api_key', this._apiKey).append('with_genres', qryNum).append('sort_by', qryString) }).pipe(
+            map((response) => response),
+            catchError(ApiService._handleError)
+          ).subscribe((response: any) =>
+            (apiResponse = response),
+            (error) => {
+              responseObservable.error(error)
+            },
+            () => {
+              responseObservable.next(apiResponse);
+              responseObservable.complete()
+            }
+          )
       }
     )
   }
 
 
-  public getDataTwo(type: string, query: string,params?: HttpParams) {
+  public getCategoryData(type: string, query: string, params?: HttpParams) {
     let apiResponse: any;
     return new Observable<any>(
       (responseObservable) => {
         this.http.get(`${this.uri}/${type}/${query}`,
-         {params: params.append('api_key', this._apiKey)}).pipe(
-          map((response) => response),
-          catchError(ApiService._handleError)
-        ).subscribe((response: any) =>
-          (apiResponse = response),
-          (error) => {
-            responseObservable.error(error)
-          },
-          () => {
-            responseObservable.next(apiResponse);
-            responseObservable.complete()
-          }
-        )
+          { params: params.append('api_key', this._apiKey) }).pipe(
+            map((response) => response),
+            catchError(ApiService._handleError)
+          ).subscribe((response: any) =>
+            (apiResponse = response),
+            (error) => {
+              responseObservable.error(error)
+            },
+            () => {
+              responseObservable.next(apiResponse);
+              responseObservable.complete()
+            }
+          )
       }
     )
 

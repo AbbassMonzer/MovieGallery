@@ -25,6 +25,7 @@
   position: relative;
   width: 55rem;
   margin-top: 10px;
+  height: 394px;
 }
 
 .fa-heart {
@@ -38,4 +39,5 @@
   overflow: hidden;
   text-overflow: clip;
 }
+
 

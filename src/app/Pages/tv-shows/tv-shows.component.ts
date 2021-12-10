@@ -11,16 +11,15 @@ export class TvShowsComponent implements OnInit {
 
   constructor(private _apiService: ApiService) { }
 
-
   ngOnInit(): void {
 
     this._apiService.getData('genre/tv', 'list').subscribe(response => {
       this.genreList = response.genres.slice(0, 3);
-        for(let genre of this.genreList){
-          this._apiService.getData('discover', 'tv', genre.id, 'vote_average').subscribe(response => {
-            genre.tv = response.results.slice(0, 3)
-          })
-        }
+      for (let genre of this.genreList) {
+        this._apiService.getData('discover', 'tv', genre.id, 'vote_average').subscribe(response => {
+          genre.tv = response.results.slice(0, 3)
+        })
+      }
     })
   }
 
