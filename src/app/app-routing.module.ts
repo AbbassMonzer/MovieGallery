@@ -5,6 +5,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { MovieDetailsComponent } from './pages/multi-media-details/multi-media-details.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { TvShowsComponent } from './pages/tv-shows/tv-shows.component';
+import { MultiMediaResolverService } from './resolvers/multi-media.resolver';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 
 const routes: Routes = [
@@ -13,6 +15,7 @@ const routes: Routes = [
   {path:'movies', component:MoviesComponent},
   {path:'tv-shows', component:TvShowsComponent},
   {path:'categories/:id/:type', component:CategoriesComponent},
+  {path:'contact-us', component:ContactUsComponent},
 
 ];
 

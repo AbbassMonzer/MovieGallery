@@ -1,0 +1,45 @@
+<section style="margin-top:-8px;">
+      <div class="container">
+        <form [formGroup]="contactForm">
+              <div class="row" style="margin-top: 30px;">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="form-group">
+                          <label for="FirstName">First Name</label>
+                          <input type="text" class="form-control" formControlName="FirstName" id="FirstName" placeholder="Enter Your First Name">
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="form-group">
+                          <label for="LastName">Last Name</label>
+                          <input type="text" class="form-control" formControlName="LastName" id="LastName" placeholder="Enter Your Last Name">
+
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="form-group">
+                          <label for="email">Email address</label>
+                          <input type="email" class="form-control" formControlName="Email" id="email" aria-describedby="emailHelp"
+                              placeholder="Enter Your Email">
+
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="form-group">
+                          <label for="PhoneNumber">Phone Number</label>
+                          <input type="text" class="form-control" id="PhoneNumber" formControlName="PhoneNumber"
+                              placeholder="Enter Your Phone Number">
+
+                      </div>
+                  </div>
+              </div>
+              <div class="row" style="margin-top: 20px;">
+                  <textarea formControlName="Content" style=" margin:0 auto; width: 80%;height: 180px;resize: none;padding: 10px;" placeholder="Enter Your Message" id="content"></textarea>
+              </div>
+              <div class="row" style="margin-top: 20px;">
+                  <button class="btn btn-primary" style="border-radius: 15px;margin:0 auto;width: 10%;" (click)="onSubmit()" [disabled]="!contactForm.valid">Submit</button>
+              </div>
+      </form>
+      </div>
+  </section>

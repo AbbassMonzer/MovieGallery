@@ -8,7 +8,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class TvShowsComponent implements OnInit {
   public genreList = [];
-
+test
   constructor(private _apiService: ApiService) { }
 
   ngOnInit(): void {
@@ -21,6 +21,10 @@ export class TvShowsComponent implements OnInit {
         })
       }
     })
+  }
+
+  getCategoryName(genre) {
+    localStorage.setItem('category', genre.name);
   }
 
 

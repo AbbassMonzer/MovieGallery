@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -8,8 +9,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class MoviesComponent implements OnInit {
   public genreList = [];
-
-  constructor(private _apiService: ApiService) { }
+  constructor(private _apiService: ApiService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this._apiService.getData('genre/movie', 'list').subscribe(response => {
@@ -22,6 +22,10 @@ export class MoviesComponent implements OnInit {
     })
   }
 
+
+  getCategoryName(genre) {
+    localStorage.setItem('category', genre.name);
+  }
 
 }
 

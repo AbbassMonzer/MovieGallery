@@ -13,7 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MultiMediaComponent } from './components/multi-media/multi-media.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     TvShowsComponent,
     MultiMediaComponent,
     CategoriesComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
