@@ -24,7 +24,6 @@ export class ContactUsComponent implements OnInit {
   onSubmit(){
     console.log(this.contactForm.value);
     this._apiService.postData(this.contactForm.value).subscribe(() => {
-      console.log("successful")
     }, error => {
       console.log(error)
     })
