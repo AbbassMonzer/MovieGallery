@@ -1,0 +1,9 @@
+input.ng-invalid.ng-touched {
+  border: 1.5px solid red;
+}
+.help-block {
+  color: red;
+}
+textarea.ng-invalid.ng-touched {
+  border: 1.5px solid red;
+}

@@ -10,6 +10,7 @@ export class ApiService {
   public uri: string = 'https://api.themoviedb.org/3'
   constructor(private http: HttpClient) { }
 
+  // this function returns data from the movie database as an observable and checks for errors
   public getData(type: string, query: string, qryNum?: any, qryString?: any) {
     let apiResponse: any;
     return new Observable<any>(
@@ -56,7 +57,7 @@ export class ApiService {
 
   }
 
-
+// error handling function for error that observables may have when retreiving data
   private static _handleError(error) {
     const objectError = {
       status: error.status,
@@ -64,4 +65,11 @@ export class ApiService {
     }
     return throwError(objectError)
   }
+
+
+//dummy function for posting data
+postData(form:any){
+  return this.http.post(this.uri+'post',form)
+}
+
 }

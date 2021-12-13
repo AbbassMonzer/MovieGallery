@@ -23,13 +23,6 @@ export class CategoriesComponent implements OnInit {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
     this.type = this.activatedRoute.snapshot.paramMap.get("type");
     this.getCategoryData();
-    // console.log(this.type)
-    // if (this.type = "movie") {
-    //   this.multiMedia = "Movies"
-    // }
-    // else if (this.type = "tv") {
-    //   this.multiMedia = "TV Shows"
-    // }
   }
 
 

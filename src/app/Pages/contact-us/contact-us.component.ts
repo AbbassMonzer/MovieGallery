@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactUsComponent implements OnInit {
   contactForm: FormGroup;
-  constructor() { }
+  constructor(private _apiService: ApiService) { }
 
   ngOnInit(): void {
     this.contactForm = new FormGroup({
@@ -22,6 +23,11 @@ export class ContactUsComponent implements OnInit {
 
   onSubmit(){
     console.log(this.contactForm.value);
+    this._apiService.postData(this.contactForm.value).subscribe(() => {
+      console.log("successful")
+    }, error => {
+      console.log(error)
+    })
     this.contactForm.reset();
   }
 
