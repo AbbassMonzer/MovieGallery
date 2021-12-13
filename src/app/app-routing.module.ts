@@ -1,21 +1,32 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CategoriesComponent } from './pages/categories/categories.component';
-import { HomeComponent } from './pages/home/home.component';
-import { MovieDetailsComponent } from './pages/multi-media-details/multi-media-details.component';
-import { MoviesComponent } from './pages/movies/movies.component';
-import { TvShowsComponent } from './pages/tv-shows/tv-shows.component';
-import { MultiMediaResolverService } from './resolvers/multi-media.resolver';
-import { ContactUsComponent } from './pages/contact-us/contact-us.component';
-
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
-  {path:'multi-media-details/:id/:type', component:MovieDetailsComponent},
-  {path:'movies', component:MoviesComponent},
-  {path:'tv-shows', component:TvShowsComponent},
-  {path:'categories/:id/:type', component:CategoriesComponent},
-  {path:'contact-us', component:ContactUsComponent},
+  {
+    path: '',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'multi-media-details/:id/:type',
+    loadChildren: () => import('./pages/multi-media-details/multi-media-details.module').then(m => m.MultiMediaDetailsModule)
+  },
+  {
+    path: 'movies',
+    loadChildren: () => import('./pages/movies/movies.module').then(m => m.MoviesModule)
+  },
+  {
+    path: 'tv-shows',
+    loadChildren: () => import('./pages/tv-shows/tv-shows.module').then(m => m.TvShowsModule)
+  },
+  {
+    path: 'categories/:id/:type',
+    loadChildren: () => import('./pages/categories/categories.module').then(m => m.CategoriesModule)
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () => import('./pages/contact-us/contact-us.module').then(m => m.ContactUsModule)
+  },
+
 
 ];
 

@@ -6,7 +6,7 @@ import { ApiService } from 'src/app/services/api.service';
   templateUrl: './multi-media-details.component.html',
   styleUrls: ['./multi-media-details.component.css']
 })
-export class MovieDetailsComponent implements OnInit {
+export class MultiMediaDetailsComponent implements OnInit {
   public id:any;
   public multiMediaDetails = [];
   public type:string;

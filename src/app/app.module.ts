@@ -4,16 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
-import { MoviesComponent } from './pages/movies/movies.component';
-import { MovieDetailsComponent } from './pages/multi-media-details/multi-media-details.component';
-import { TvShowsComponent } from './pages/tv-shows/tv-shows.component';
 import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
-import { MultiMediaComponent } from './components/multi-media/multi-media.component';
-import { CategoriesComponent } from './pages/categories/categories.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -21,13 +14,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    MoviesComponent,
-    MovieDetailsComponent,
-    TvShowsComponent,
-    MultiMediaComponent,
-    CategoriesComponent,
-    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
