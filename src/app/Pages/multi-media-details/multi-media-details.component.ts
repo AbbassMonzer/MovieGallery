@@ -15,9 +15,9 @@ export class MultiMediaDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
     this.type = this.activatedRoute.snapshot.paramMap.get("type");
-    this._apiService.getData(this.type ,this.id).subscribe(response =>{
-      this.multiMediaDetails = response;
-    })
+    this.activatedRoute.data.subscribe((response: any) => {
+      this.multiMediaDetails = response.multiMediaResolver;
+    });
   }
 
 }

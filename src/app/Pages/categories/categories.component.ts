@@ -1,6 +1,7 @@
 import { HttpParams } from '@angular/common/http';
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MultiMediaResolverService } from 'src/app/resolvers/multi-media.resolver';
 import { ApiService } from 'src/app/services/api.service';
 @Component({
   selector: 'app-categories',
@@ -11,11 +12,11 @@ export class CategoriesComponent implements OnInit {
   public movieCategory = [];
   public id: any;
   public type: string;
-  public multiMedia: string =""
   pageSize = 20
   page = 1
   collectionSize = 120
   public category: string
+
   constructor(private activatedRoute: ActivatedRoute, private _apiService: ApiService) { }
 
   ngOnInit(): void {

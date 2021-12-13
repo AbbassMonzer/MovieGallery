@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MultiMediaResolverService } from './resolvers/multi-media.resolver';
 
 const routes: Routes = [
   {
@@ -8,7 +9,8 @@ const routes: Routes = [
   },
   {
     path: 'multi-media-details/:id/:type',
-    loadChildren: () => import('./pages/multi-media-details/multi-media-details.module').then(m => m.MultiMediaDetailsModule)
+    loadChildren: () => import('./pages/multi-media-details/multi-media-details.module').then(m => m.MultiMediaDetailsModule),
+    resolve: { multiMediaResolver: MultiMediaResolverService }
   },
   {
     path: 'movies',
@@ -32,7 +34,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [MultiMediaResolverService]
 })
 export class AppRoutingModule { }
 
