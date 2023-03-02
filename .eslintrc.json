@@ -1,19 +1,17 @@
 {
-
   "env": {
-      "browser": true,
-      "amd": true,
-      "node": true
-  
+    "browser": true,
+    "amd": true,
+    "es2021": true,
+    "node": true
   },
   "parserOptions": {
-      "ecmaVersion": 6
-    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
   "extends": "eslint:recommended",
   "rules": {
-      "no-console": "off",
-      "semi": [
-          "error",
-          "always"
-      ]
-  }}
+    "no-console": "off",
+    "semi": ["error", "always"]
+  }
+}
