@@ -7,10 +7,10 @@
 }
 
 .card img {
-  transform: scale(1.0, 1.0);
+  transform: scale(1, 1);
   transition-duration: 500ms;
   transition-timing-function: ease-out;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .card-img-wrapper {
@@ -20,7 +20,7 @@
   margin-top: 15px;
 }
 
-.card-img-wrapper-horizantal{
+.card-img-wrapper-horizantal {
   overflow: hidden;
   position: relative;
   width: 55rem;
@@ -32,12 +32,10 @@
   color: red;
 }
 
-.card-body{
+.card-body {
   margin-top: 32px;
-  display:block;
-  line-height:14pt;
+  display: block;
+  line-height: 14pt;
   overflow: hidden;
   text-overflow: clip;
 }
-
-

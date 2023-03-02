@@ -1,18 +1,25 @@
 <div class="col ml-45">
   <div class="row">
     <ng-template let-title="categoryTitle" #templateRef>
-      <h3> All {{title}}</h3>
+      <h3>All {{ title }}</h3>
     </ng-template>
 
-    <div *ngTemplateOutlet="templateRef; context:{categoryTitle: category}">
-    </div>
+    <div
+      *ngTemplateOutlet="
+        templateRef;
+        context: { categoryTitle: category }
+      "></div>
 
-    <div *ngFor="let movie of movieCategory ; let i=index" class="col-lg-4">
+    <div *ngFor="let movie of movieCategory; let i = index" class="col-lg-4">
       <app-multi-media [multiMedia]="movie"></app-multi-media>
-      <br>
-      <br>
+      <br />
+      <br />
     </div>
-    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="paginate();">
+    <ngb-pagination
+      [collectionSize]="collectionSize"
+      [(page)]="page"
+      [pageSize]="pageSize"
+      (pageChange)="paginate()">
     </ngb-pagination>
   </div>
 </div>

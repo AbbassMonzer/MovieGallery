@@ -5,7 +5,7 @@ nav {
   color: white;
 }
 
-li{
+li {
   padding-left: 15px;
 }
 
@@ -14,7 +14,6 @@ li{
   color: #032541;
   border-radius: 10px;
 }
-
 
 .navbar-nav li > a:hover,
 .navbar-nav li > a:focus {

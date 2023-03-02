@@ -1,52 +1,116 @@
-<section style="margin-top:-8px;">
-      <div class="container">
-        <form [formGroup]="contactForm">
-              <div class="row" style="margin-top: 30px;">
-                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <div class="form-group">
-                          <label for="FirstName">First Name</label>
-                          <input type="text" class="form-control" formControlName="FirstName" id="FirstName" placeholder="Enter Your First Name">
-                          <span *ngIf="!contactForm.get('FirstName').valid && contactForm.get('FirstName').touched" class="help-block">Please Enter Your FirstName </span>
-
-                      </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <div class="form-group">
-                          <label for="LastName">Last Name</label>
-                          <input type="text" class="form-control" formControlName="LastName" id="LastName" placeholder="Enter Your Last Name">
-                          <span *ngIf="!contactForm.get('LastName').valid && contactForm.get('LastName').touched" class="help-block">Please Enter Your LastName </span>
-
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <div class="form-group">
-                          <label for="email">Email address</label>
-                          <input type="email" class="form-control" formControlName="Email" id="email" aria-describedby="emailHelp"
-                              placeholder="Enter Your Email">
-                              <span *ngIf="!contactForm.get('Email').valid && contactForm.get('Email').touched" class="help-block">Please Enter Your Email </span>
-
-                      </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <div class="form-group">
-                          <label for="PhoneNumber">Phone Number</label>
-                          <input type="text" class="form-control" id="PhoneNumber" formControlName="PhoneNumber"
-                              placeholder="Enter Your Phone Number">
-                              <span *ngIf="!contactForm.get('PhoneNumber').valid && contactForm.get('PhoneNumber').touched" class="help-block">Please Enter Your Phone Number </span>
-
-                      </div>
-                  </div>
-              </div>
-              <div class="row" style="margin-top: 20px;">
-                  <textarea formControlName="Content" style=" margin:0 auto; width: 80%;height: 180px;resize: none;padding: 10px;" placeholder="Enter Your Message" id="content"></textarea>
-                  <span *ngIf="!contactForm.get('Content').valid && contactForm.get('Content').touched" class="help-block"> </span>
-
-              </div>
-              <div class="row" style="margin-top: 20px;">
-                  <button class="btn btn-primary" style="border-radius: 15px;margin:0 auto;width: 10%;" (click)="onSubmit()" [disabled]="!contactForm.valid">Submit</button>
-              </div>
-      </form>
+<section style="margin-top: -8px">
+  <div class="container">
+    <form [formGroup]="contactForm">
+      <div class="row" style="margin-top: 30px">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="form-group">
+            <label for="FirstName">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="FirstName"
+              id="FirstName"
+              placeholder="Enter Your First Name" />
+            <span
+              *ngIf="
+                !contactForm.get('FirstName').valid &&
+                contactForm.get('FirstName').touched
+              "
+              class="help-block"
+              >Please Enter Your FirstName
+            </span>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="form-group">
+            <label for="LastName">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="LastName"
+              id="LastName"
+              placeholder="Enter Your Last Name" />
+            <span
+              *ngIf="
+                !contactForm.get('LastName').valid &&
+                contactForm.get('LastName').touched
+              "
+              class="help-block"
+              >Please Enter Your LastName
+            </span>
+          </div>
+        </div>
       </div>
-  </section>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="Email"
+              id="email"
+              aria-describedby="emailHelp"
+              placeholder="Enter Your Email" />
+            <span
+              *ngIf="
+                !contactForm.get('Email').valid &&
+                contactForm.get('Email').touched
+              "
+              class="help-block"
+              >Please Enter Your Email
+            </span>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="form-group">
+            <label for="PhoneNumber">Phone Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="PhoneNumber"
+              formControlName="PhoneNumber"
+              placeholder="Enter Your Phone Number" />
+            <span
+              *ngIf="
+                !contactForm.get('PhoneNumber').valid &&
+                contactForm.get('PhoneNumber').touched
+              "
+              class="help-block"
+              >Please Enter Your Phone Number
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px">
+        <textarea
+          formControlName="Content"
+          style="
+            margin: 0 auto;
+            width: 80%;
+            height: 180px;
+            resize: none;
+            padding: 10px;
+          "
+          placeholder="Enter Your Message"
+          id="content"></textarea>
+        <span
+          *ngIf="
+            !contactForm.get('Content').valid &&
+            contactForm.get('Content').touched
+          "
+          class="help-block">
+        </span>
+      </div>
+      <div class="row" style="margin-top: 20px">
+        <button
+          class="btn btn-primary"
+          style="border-radius: 15px; margin: 0 auto; width: 10%"
+          (click)="onSubmit()"
+          [disabled]="!contactForm.valid">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

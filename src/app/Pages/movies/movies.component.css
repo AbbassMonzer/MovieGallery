@@ -1,33 +1,32 @@
 .list-group-item {
-cursor: pointer;
-width: 50%;
-margin-left: 45px;
-color: #032541;
+  cursor: pointer;
+  width: 50%;
+  margin-left: 45px;
+  color: #032541;
 }
 
-.wrapper{
+.wrapper {
   margin-top: 20px;
   margin-left: 20px;
 }
 
-.ml-45{
+.ml-45 {
   margin-left: 45px;
 }
 
-.fa-angle-double-right{
+.fa-angle-double-right {
   margin-left: 28rem;
   vertical-align: middle;
 }
 
-
- h4 {
-	margin: 1em 0 0.5em 0;
-	font-weight: 600;
-	font-family: 'Titillium Web', sans-serif;
-	position: relative;
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
-	font-size: 22px;
-	line-height: 40px;
-	color: #032541;
-	text-transform: uppercase;
+h4 {
+  margin: 1em 0 0.5em 0;
+  font-weight: 600;
+  font-family: 'Titillium Web', sans-serif;
+  position: relative;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+  font-size: 22px;
+  line-height: 40px;
+  color: #032541;
+  text-transform: uppercase;
 }

@@ -1,25 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-multi-media',
   templateUrl: './multi-media.component.html',
-  styleUrls: ['./multi-media.component.css']
+  styleUrls: ['./multi-media.component.css'],
 })
 export class MultiMediaComponent implements OnInit {
-  @Input() multiMedia: any;
-  constructor(private route:Router)  { }
+  @Input() multiMedia: any
+  constructor(private route: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
-  }
-
-  view(multiMedia){
-    if(multiMedia.title){
-      this.route.navigate(['/multi-media-details',multiMedia.id,'movie']);
+  view(multiMedia) {
+    if (multiMedia.title) {
+      this.route.navigate(['/multi-media-details', multiMedia.id, 'movie'])
     }
-    if(multiMedia.name){
-      this.route.navigate(['/multi-media-details',multiMedia.id,'tv']);
+    if (multiMedia.name) {
+      this.route.navigate(['/multi-media-details', multiMedia.id, 'tv'])
     }
   }
-
 }
